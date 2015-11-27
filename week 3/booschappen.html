@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	 <title> boodschappen </title>
+</head>
+<body>
+<h1> Boodschappenlijstje</h1>
+<input type="text" id="invoer" placeholder="Wat heb je nodig?">
+<input type="button" id="knop" value="toevoegen">
+<ol id="menu">
+	<!-- hier komen de booschappen -->
+</ol>
+<script>
+	var toevoegen = function (){
+		// invoer selecteren en opslaan
+		var invoer = document.getElementById("invoer").value;
+	
+		// lijst selecteren en vullen 
+
+		var lijst = document.getElementById("menu");
+		lijst.innerHTML = lijst.innerHTML + "<li>" + invoer + "</li>";
+
+		// invoerveld leegmaken 
+		document.getElementById("invoer").value = "";
+
+	}
+
+		document.getElementById("knop").onclick = function () {
+		//alert("knop werkt");
+		toevoegen();
+	}
+
+		// reageren op enter-toets (event)
+		document.getElementById("invoer").onkeyup = function(event){
+			if(event.keyCode == 13){
+				toevoegen();
+			}
+		}
+
+</script>
+</body>
+</html> 

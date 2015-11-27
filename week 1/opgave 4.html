@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title> Opgave 4 </title>
+</head>
+<body>
+
+	<script >
+	var aankoopbedrag
+	var totaalbedrag
+
+	aankoopbedrag = prompt("Wat is het aankoopbedrag?","Vul hier het aankoopbedrag in.");
+	totaalbedrag = parseFloat(aankoopbedrag) + 3.95;
+
+	if(aankoopbedrag >= 25){
+		alert("Uw bestelling wordt gratis bezorgd. Uw totaalbedrag is " + aankoopbedrag + "euro.")
+	}
+	//boven 25 euro
+	else 
+	{
+		alert("Het totaalbedrag is " + totaalbedrag + " euro inclusief verzendkosten.")
+	}
+	</script>
+</body>
+</html> 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title> Oopgave 1 week 2 </title>
+</head>
+<body>
+
+	<input type="button" value="klik hier" onclick="vergelijkwoorden()" />
+	<script >
+	var vergelijkwoorden = function () {
+		
+		var woord1 = prompt("Wat is woord 1?");
+		var woord2 = prompt("Wat is woord 2?");
+
+		if(woord1.length > woord2.length){
+			alert("Woord 1 is het langst en bevat " + woord1.length + " letters.")
+		} if (woord2.length > woord1.length){
+			alert("Woord 2 is het langst en bevat " + woord2.length + " letters.")
+		}
+		if(woord1.length == woord2.length){
+			alert("Beide woorden zijn even lang en bevatten " + woord1.length + " letters.")
+		}
+	}
+	
+
+	</script>
+</body>
+</html> 

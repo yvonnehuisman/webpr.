@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <title> Opgave 2 week 2</title>
+</head>
+<body>
+
+<input type="button" value="knop" onclick="berekenBMI()" />
+	
+	<script >
+	var berekenBMI = function () { 
+	
+		var gewicht = prompt("Wat is je gewicht? (in kg)");
+		var lengte = prompt("Wat is je lengte? (in cm)");
+
+		gewicht = parseFloat(gewicht);
+		lengte = parseFloat(lengte)/100;
+
+		var bmi = gewicht / (lengte * lengte);
+
+		if(bmi <18.5){
+			alert( "U heeft ondergewicht.");
+		}
+		else if(bmi<25){
+			alert("U heeft een normaal gewicht.");
+		}
+		else if(bmi<27){
+			alert("U heeft licht overgewicht.");
+		}
+		else if(bmi<30){
+			alert("U heeft matig overgewicht.");
+		}
+		else if(bmi<40){
+			alert("U heeft ernstig overgewicht.");
+		}
+		else {
+			alert("U heeft ziekelijk overgewicht.");
+		`}
+		
+
+	}
+	</script>
+</body>
+</html> 
