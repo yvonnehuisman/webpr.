@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML bewerken I</title>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<style>
+	p{
+        border: 1px, solid black;
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <li>een</li>
+        <li>twee</li>
+        <li id="foo">dri</li>
+        <li>vier</li>
+        <li>vijf</li>
+    </ul>
+    <ol>
+        <li>een</li>
+        <li>twee</li>
+        <li>drie</li>
+        <li>vier</li>
+
+    </ol>
+
+   
+<script>
+//opgave 1
+    $("foo").html("drie");    
+//opgave 2
+//selecteer ol       // LET OP DE EXTRA "S" BIJ ELEMENTS
+    $("ol").append("<li>vijf</li>");    
+//creeer li-element
+    $('ul').prepend("<li> nul</li>");  
+//tekst koppelen aan nieuw li element
+        
+//nieuw li element koppelen aan ol element
+       
+//opgave 3
+//selecteer li in ul (querySelector)
+
+//creeer nieuw li-element
+
+//creeer nieuw textNode met de tekst "nul"
+
+//koppen textNode aan nieuw li-element
+
+//voeg nieuw element toe aan het begin
+
+//in jQuery heb je prepend() en append()
+
+//opgave 4
+//creeer een p-element
+
+//creeer een textNode met tekst
+
+//koppel tekst aan p-element
+
+//koppel p-element aan body
+
+//opgave 5
+//element is al aangemaakt bij opgave4
+//1px rand toevoegen aan pElement
+
+//opgave 6
+//selecteer li met id foo
+
+//verander id in derde
+
+//opgave 7
+//selecteer ol op tagname
+
+//koppel deze aan een class
+</script>
+</body>
+</html>

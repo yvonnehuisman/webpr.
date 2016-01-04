@@ -1,0 +1,30 @@
+body {
+	font-family: "helvetica"
+}
+
+.omschrijving {
+	font-weight: bold;
+	font-size: 15pt;
+}
+
+.likes {
+	float: left;
+	padding-right: 10px;
+
+}
+.bestelling, .addPizzas {
+	padding-bottom: 10px;
+}
+
+.message {
+	float: left;
+	padding-right: 10px;
+}
+
+.bestellingen {
+}
+
+.bestelling {
+
+}
+

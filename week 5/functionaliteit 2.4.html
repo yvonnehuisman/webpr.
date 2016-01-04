@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8"><title>Profiel foto aanpassen</title>
+<script>
+//bron(uit 2013): http://blog.teamtreehouse.com/reading-files-using-the-html5-filereader-api 
+window.onload = function() {
+        var fileInput = document.getElementById('fileInput');
+        var fileDisplayArea = document.getElementById('fileDisplayArea');
+        fileInput.addEventListener('change', function(e) {
+            var file = fileInput.files[0];
+            var imageType = /image.*/;
+            if (file.type.match(imageType)) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    fileDisplayArea.innerHTML = "";
+                    var img = new Image();
+                    img.src = reader.result;
+                    img.id = "myImg";
+                    fileDisplayArea.appendChild(img);
+                }
+                reader.readAsDataURL(file); 
+            } else {
+                fileDisplayArea.innerHTML = "File not supported!";
+            }
+        });
+}
+</script>
+<style>
+	#myImg{border-radius: 1000px;}
+	input[type="file"]{width:80px;}
+</style>
+</head>
+<body>
+<div id="fileDisplayArea">
+    <img id="myImg" src="profile.png" alt="your image" />
+</div>
+<input type="file" id="fileInput" />
+</body>
+</html>

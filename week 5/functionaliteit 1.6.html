@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Shake voorbeeld</title>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<style>
+	#loginscherm {	
+		height:200px;width:200px;
+		background-color:#00A1E1;
+		padding:100px;
+		margin:100px auto;
+	}
+</style>
+</head>
+
+<body>
+
+<div id="loginscherm">
+
+<form>
+<label for="user">Gebruikersnaam:</label>
+<input type="text" name="user" id="user" placeholder="Gebruikersnaam">
+
+<label for="pass">Wachtwoord:</label>
+<input type="password" name="pass" id="pass" placeholder="Wachtwoord">
+<br>
+<input type="button" value="Inloggen" id="knop" />
+<div id="resultaat"></div>
+</form>
+
+</div>
+<script>
+$(document).ready(function(){
+	
+		$('#knop').click( function(){
+			//invoervelden ophalen
+			var user = $('#user').val();
+			var pass = $('#pass').val();
+			
+			if(user == "ronald" && pass == "supergeheimwachtwoord"){
+				//ga naar de volgende pagina
+			} else {
+				//effect is geen standaard functie (jquery-ui.min.js nodig)
+				$('#loginscherm').effect("shake");	
+			}
+			
+			//invoervelden leegmaken
+			$('#user').val('');
+			$('#pass').val('');
+			
+		});
+});
+</script>
+</body>
+</html>

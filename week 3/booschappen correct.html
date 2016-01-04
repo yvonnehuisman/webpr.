@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	 <title> boodschappen </title>
+	 <style>
+	 	.checked{text-decoration: line-through;}
+	 </style>
+</head>
+<body>
+<h1> Boodschappenlijstje</h1>
+<input type="text" id="invoer" placeholder="Wat heb je nodig?">
+<input type="button" id="knop" value="toevoegen">
+<ol id="menu">
+	<!-- hier komen de booschappen -->
+</ol>
+<script>
+	var toevoegen = function (){
+		// invoer selecteren en opslaan
+		var invoer = document.getElementById("invoer").value;
+	
+		// lijst selecteren en vullen 
+
+		var lijst = document.getElementById("menu");
+		
+		var li = document.createElement("li");
+		var tekst = document.createTextNode(invoer);
+		 // li.className = "classnaam" --> Zou kunnen, zo kun je met css een stijl mee geven
+		 li.onclick = bewerken;
+
+		li.appendChild(tekst);
+		lijst.appendChild(li);
+
+
+		// invoerveld leegmaken 
+		document.getElementById("invoer").value = "";
+
+	}
+
+		var bewerken = function(){
+			//alert("je hebt " + this.innerHTML + " geklikt");   melding waarop je op geklikt hebt
+			//this.parentNode.removeChild(this);                  je verwijdert waarop je op klikt
+			//this.innerHTML = prompt("aanpassen?", this.innerHTML);    aanpassen waar je op klikt
+			this.className = "checked";                         // doorstrepen wat je aanklikt
+		};
+
+		document.getElementById("knop").onclick = function () {
+		//alert("knop werkt");
+		toevoegen();
+	}
+
+		// reageren op enter-toets (event)
+		document.getElementById("invoer").onkeyup = function(event){
+			if(event.keyCode == 13){
+				toevoegen();
+			}
+		}
+
+</script>
+</body>
+</html> 

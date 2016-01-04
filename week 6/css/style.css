@@ -1,0 +1,19 @@
+h1 {
+	color:#E6302B;
+}
+
+h2{
+	color: #00A1E1;
+}
+
+/*body{
+	background: url(../images/plaatje.png);
+}*/
+
+.delete{
+	cursor: pointer;
+}
+
+.edit{
+	cursor: pointer;
+}

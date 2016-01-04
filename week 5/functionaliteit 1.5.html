@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>functionaliteiten</title>
+</head>
+<body>
+	<input type="text" id="invoer" placeholder="tekst invoer" >
+	<input type="button" id="knop" value="controleer" >
+	<p id="melding"> </p>
+
+	<script>
+	//F1.3
+	var aantalPogingen = 0;
+	document.getElementById('knop').onclick= function(){
+		var invoer = document.getElementById("invoer").value
+			//1.5
+			if(invoer==""){
+				document.getElementById("melding").innerHTML = "Wel wat invullen";
+		}
+		aantalPogingen = aantalPogingen + 1; // afkorten aantalPogingen++
+		if (aantalPogingen == 3){
+			//alert("Geblokkeerd");
+			document.getElementById('knop').disabled = true;
+			document.write("U heeft 3 pogingen gehad.")
+			//1.4
+			location.href = "tijdlijn.html";
+		}
+	}
+		
+	</script>
+</body>
+</html>

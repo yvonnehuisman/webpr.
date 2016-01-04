@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> inlog scherm </title>
+
+<meta name="keywords" content="login, eindopdracht, webprogammeren">
+<meta name="description" content="eindopdracht">
+<meta name="author" content="Yvonne Huisman">
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="PageStyle.css">
+
+<style>
+		label, input{display:block;}
+</style>
+
+</head>
+
+<body>
+<div id="logo">
+		<h1> SerniorenChat</h1>
+	</div>
+<div id="loginlayout">
+	<h1> Log in bij Senioren Chat </h1>
+	<form> 
+		<input type="text" id="gebruikersnaam" name="invoer"
+		placeholder="Vul hier uw gebruikersnaam in.">
+		<span id="melding"> </span>
+
+		<input type="password" id="wachtwoord" name="invoer"
+		placeholder="Vul hier uw wachtwoord in.">
+		<span id="meldingwachtwoord"> </span>
+	</form>
+
+	<form>
+		<input type="button" id= "login" value="Log in" onclick="location.href='timeline.html';" >
+	</form>
+
+</div>
+
+<div id="doorverwijzing">
+	<h1> Registreren bij Senioren Chat</h1>
+	<form > 
+		<input type="button" id="knopregistreren" onclick="location.href='registreren.html';" value="Doorverwijzen naar registreren" />
+	</form>
+	
+</div>
+
+<script type="text/javascript">
+	
+	var aantalPogingen = 0;   
+	//document.getElementById("login").onclick=function(){
+	//	var document.getElementById("gebruikersnaam").value;
+	//	var document.getElementById("wachtwoord").value;
+	//}  
+
+	var doorverwijzen = function(){}
+
+	document.getElementById("login").onclick=function(){
+		var gebruikersnaam = document.getElementById("gebruikersnaam").value;
+		var wachtwoord = document.getElementById("wachtwoord").value;
+
+		if (gebruikersnaam == ""){
+			document.getElementById("melding").innerHTML = "Gebruikersnaam invullen.";
+		} else if(gebruikersnaam == "Hekman" || gebruikersnaam == "Koning" || gebruikersnaam == "ErikHekman" || gebruikersnaam == "ThijsWaardenburg" || gebruikersnaam == "Ronald" || gebruikersnaam == "RonaldVanEssen" || gebruikersnaam == "Yvonne"){
+			document.getElementById("melding").innerHTML = "Deze gebruikersnaam is al in gebruik.";
+		}else{
+			document.getElementById("melding").innerHTML = "";
+		} 
+
+		if (wachtwoord == ""){
+			document.getElementById("meldingwachtwoord").innerHTML = "Wachtwoord invullen.";
+		} else {
+			document.getElementById("meldingwachtwoord").innerHTML = "";
+		}
+		aantalPogingen++;
+		if (aantalPogingen == 3){
+		document.getElementById('login').disabled = true;
+		document.getElementById("meldingwachtwoord").innerHTML = "Toegang geblokkeerd";
+		} 
+
+		if (gebruikersnaam == "Piet" && wachtwoord == "123456" || gebruikersnaam == "Yvonne" && wachtwoord == "123456"){
+			location.href="timeline.html";
+		} else{
+			document.write("Deze combinatie van uw wachtwoord en gebruikersnaam is onjuist.")
+		}
+
+} // afsluiting functie onclick
+</script>
+</body>
+</html>

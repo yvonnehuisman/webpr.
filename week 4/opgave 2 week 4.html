@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Opgave 2</title>
+</head>
+<body>
+<h1> Ik kan Spaans spreken.</h1>
+<form> 
+		<input type="number" id="getal" name="invoer"
+		placeholder="Vul hier een getal in."
+        >
+
+		<input type="button" value="Geef spaanse woord" onclick="vertalen()">
+</form>
+
+<script>
+var vertalen = function(){
+var spaans = ['uno','dos','tres','cuatro','cinco', 'seis', 'siete','ocho', 'nueve', 'diez']; 
+//var invoer = prompt("Voer een cijfer in en ik vertaal het naar het Spaans.")
+var invoer = document.getElementById("getal").value;
+
+if(invoer > 10 || invoer < 1){
+    alert("Dat getal ken ik niet.");
+}else{
+    alert("Het Spaanse woord voor het getal " + invoer + "is " + spaans[invoer-1]);
+}
+}
+	
+	/*
+    switch (Spaans) {
+    case 'option1': "1"
+        alert("Het spaanse woord voor 1 is uno.")
+        break;
+    case 'option2': "2"
+         alert("Het spaanse woord voor 2 is dos.")
+        break;
+    case 'option3':
+        alert("Het spaanse woord voor 3 is tres.")
+        break;
+    case 'option4':
+        alert("Het spaanse woord voor 4 is cuatro.")
+        break;
+    case 'option5':
+        alert("Het spaanse woord voor 5 is cinco.")
+        break; 
+    case 'option6':
+        alert("Het spaanse woord voor 6 is seis.")
+        break; 
+    case 'option7':
+        alert("Het spaanse woord voor 7 is siete.")
+        break; 
+    case 'option8':
+        alert("Het spaanse woord voor 8 is ocho.")
+        break; 
+    case 'option9':
+        alert("Het spaanse woord voor 9 is nueve.")
+        break; 
+    case 'option10':
+        alert("Het spaanse woord voor 10 is diez.")
+        break;
+    default:
+       alert("Dit programma kent dit woord niet.")
+}}
+*/
+</script>
+
+</body>
+</html>
